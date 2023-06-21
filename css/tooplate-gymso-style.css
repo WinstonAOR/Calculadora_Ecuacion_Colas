@@ -62,7 +62,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
 
   body {
-    background: var(--white-color);
+    background: #E0E0E0;
     font-family: var(--base-font-family);
   }
 
@@ -363,7 +363,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   -----------------------------------------*/
 
   .hero {
-    background-image: url('../images/hero-bg.jpg');
+    background: black;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -479,7 +479,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   -----------------------------------------*/
 
   .about {
-    background: var(--about-bg-color);
+    background: #FFFFCE;
   }
 
   .about-working-hours {
@@ -746,6 +746,10 @@ https://www.tooplate.com/view/2119-gymso-fitness
       border-bottom: 0;
     }
   }
-  #trMM1{
+  #tbMM1{
+    display:none;
+  }
+
+  #tbMMn{
     display:none;
   }
