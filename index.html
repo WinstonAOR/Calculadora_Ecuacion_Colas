@@ -91,19 +91,75 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="" class="btn custom-btn mt-3 aos-init">Limpiar</a>
+                                            <label class="text-white">K:</label>
                                         </td>
                                         <td>
-                                            <a href="" class="btn custom-btn bordered mt-3 aos-init">Calcular</a>
+                                            <input type="number" id="mm1_3" name="mm1_2">
                                         </td>
                                     </tr>
-                                    <tr id="trMM1">
+                                    <tr>
                                         <td>
-                                            <label class="text-white">Resultado:</label>
+                                            <a onclick="cleanMM1()" class="btn custom-btn mt-3 aos-init text-white">Limpiar</a>
                                         </td>
                                         <td>
-                                            <input id="mm1_r" name="mm1_r" readonly>
+                                            <a onclick="calcMM1()" class="btn custom-btn bordered mt-3 aos-init text-white">Calcular</a>
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <table id="trMM1">
+                                            <tr>
+                                                <td>
+                                                    <label class="text-white">L:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_l" name="mm1_l" readonly>
+                                                </td>
+                                                <td>
+                                                    <label class="text-white">W:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_w" name="mm1_w" readonly>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="text-white">Lq:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_lq" name="mm1_lq" readonly>
+                                                </td>
+                                                <td>
+                                                    <label class="text-white">Wq:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_wq" name="mm1_wq" readonly>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="text-white">Ro:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_ro" name="mm1_ro" readonly>
+                                                </td>
+                                                <td>
+                                                    <label class="text-white">P0:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_p0" name="mm1_p0" readonly>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="text-white">Pn>K:</label>
+                                                </td>
+                                                <td>
+                                                    <input id="mm1_pnk" name="mm1_pnk" readonly>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                            
+                                        
                                     </tr>
                                 </table>
                                     
@@ -408,6 +464,7 @@
      <script src="js/aos.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="js/functions.js"></script>
 
 </body>
 </html>
