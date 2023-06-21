@@ -110,3 +110,41 @@ function cleanMMn(){
     document.getElementById("mmn_wq").value="";
     
 }
+
+/** MD1 */
+
+function calcMD1(){
+    var resultL, resultW, resultLq, resultWq = 0;
+    var mu = document.getElementById("md1_1").value;
+    var lambda = document.getElementById("md1_2").value;
+    
+    resultLq = ((Math.pow(lambda,2))/((2*mu)*(mu-lambda)));
+    console.log(resultLq);
+    resultWq = (lambda/((2*mu)*(mu-lambda)));
+    console.log(resultWq);
+    resultL = (resultLq+(lambda/mu));
+    console.log(resultL);
+    resultW = (resultWq+(1/mu));
+    console.log(resultW);
+    
+    
+    document.getElementById("tbMD1").style.display="block";
+    document.getElementById("md1_l").value=resultL;
+    document.getElementById("md1_lq").value=resultLq;
+    document.getElementById("md1_w").value=resultW;
+    document.getElementById("md1_wq").value=resultWq;   
+    
+}
+
+function cleanMD1(){
+    document.getElementById("tbMD1").style.display="none";
+    document.getElementById("md1_1").value="";
+    document.getElementById("md1_2").value="";
+    document.getElementById("md1_l").value="";
+    document.getElementById("md1_lq").value="";
+    document.getElementById("md1_ro").value="";
+    document.getElementById("md1_p0").value="";
+    document.getElementById("md1_w").value="";
+    document.getElementById("md1_wq").value="";
+    
+}
