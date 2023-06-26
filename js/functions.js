@@ -17,23 +17,14 @@ function calcMM1(){
     var lambda = document.getElementById("mm1_2").value;
     var ka = document.getElementById("mm1_3").value;
     resultL = ((lambda)/(mu-lambda));
-    console.log(resultL);
     resultW = ((1)/(mu-lambda));
-    console.log(resultW);
     resultLq = ((Math.pow(lambda,2))/(mu*(mu-lambda)));
-    console.log(resultLq);
     resultWq = ((lambda)/(mu*(mu-lambda)));
-    console.log(resultWq);
     resultP0 = ((1)-(lambda/mu))*100;
-    console.log(resultP0);
     resultRo = (lambda/mu)*100;
-    console.log(resultRo);
     pnk1 = lambda/mu;
-    console.log(pnk1);
     pnk2 = parseInt(ka)+1;
-    console.log(pnk2);
     resultPnk = (Math.pow(pnk1, pnk2))*100;
-    console.log(resultPnk);
     document.getElementById("tbMM1").style.display="block";
     document.getElementById("mm1_l").value=resultL.toFixed(4);
     document.getElementById("mm1_lq").value=resultLq.toFixed(4);
@@ -42,7 +33,11 @@ function calcMM1(){
     document.getElementById("mm1_p0").value=resultP0.toFixed(4) + "%";
     document.getElementById("mm1_w").value=resultW.toFixed(4);
     document.getElementById("mm1_wq").value=resultWq.toFixed(4);
-    
+    console.log("Cs = Costo de servicio");
+    console.log("Cw= Costo de espera");
+    console.log("Costo total de espera = (lambda*Wq)*Tiempolaboral*Cw");
+    console.log("Costo total de servicio = m * Cs * Tiempolaboral");
+    console.log("Costo total = C_espera + C_servicio");
     
 }
 
@@ -73,17 +68,11 @@ function calcMMn(){
     factN = factorial(n);
     factM = factorial(m);
     resultP0 = (1/(((1/factN)+(Math.pow(lambda/mu,n)))+((1/factM)*(Math.pow(lambda/mu, m))*((m*mu)/((m*mu)-lambda)))));
-    console.log(resultP0);
     resultL = (((((lambda*mu)*(Math.pow(lambda/mu, m)))/((factorial(m-1))*(Math.pow(((m*mu)-lambda),2))))*resultP0)+(lambda/mu));
-    console.log(resultL);
     resultW = (resultL/lambda);
-    console.log(resultW);
     resultLq = (resultL-(lambda/mu));
-    console.log(resultLq);
     resultWq = (resultLq/lambda);
-    console.log(resultWq);
     resultRo = (lambda/(m*mu));
-    console.log(resultRo);
     document.getElementById("tbMMn").style.display="block";
     document.getElementById("mmn_l").value=resultL.toFixed(4);
     document.getElementById("mmn_lq").value=resultLq.toFixed(4);
@@ -119,13 +108,9 @@ function calcMD1(){
     var lambda = document.getElementById("md1_2").value;
     
     resultLq = ((Math.pow(lambda,2))/((2*mu)*(mu-lambda)));
-    console.log(resultLq);
     resultWq = (lambda/((2*mu)*(mu-lambda)));
-    console.log(resultWq);
     resultL = (resultLq+(lambda/mu));
-    console.log(resultL);
     resultW = (resultWq+(1/mu));
-    console.log(resultW);
     
     
     document.getElementById("tbMD1").style.display="block";
@@ -168,11 +153,8 @@ function calcMM1I(){
     var n = document.getElementById("mm1i_3").value;
     resultP0 = (1/SumatoriaMM1I(n,lambda/mu));
     resultLq = (n-((parseFloat(lambda)+parseFloat(mu))/lambda)*(1-resultP0));
-    console.log(resultLq);
     resultL = (resultLq+(1-resultP0));
-    console.log(resultL);
     resultWq = (resultLq/((n-resultL)*lambda));
-    console.log(resultWq);
     
     
     document.getElementById("tbMM1I").style.display="block";
